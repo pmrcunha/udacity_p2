@@ -26,9 +26,11 @@ h6 {
 
 h1 {
   font-size: 40px;
-  color: #f5a623;
+  color: #5f9ea0;
   line-height: 48px;
-  display: inline;
+  display: block;
+  text-align: center;
+  margin: 30px 0 0;
 }
 
 h2 {
@@ -57,10 +59,15 @@ h2,
 h3,
 h4,
 h5 {
-  padding:10px 5%;
-
+  padding:10px 0;
 }
 
+#role {
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  color: white;
+}
 
 .date-text {
   font-style: italic;
@@ -76,7 +83,6 @@ h5 {
   color: #999;
   line-height: 16px;
   float: right;
-
 }
 
 p {
@@ -92,24 +98,45 @@ a {
   display: block;
 }
 
+#contacts-container {
+  margin: 20px 0 0;
+  width: 33.3%;
+  text-align: right;
+}
+
+#biopic-container {
+  width: 33.3%;
+  text-align: center;
+}
+
+#skills-container {
+  margin: 20px 0 0;
+  width: 33.3%;
+}
+
 .welcome-message {
   font-style: italic;
   font-size: 18px;
   color: #f3f3f3;
   line-height: 28px;
+  text-align: center;
 }
 
-#skills-h3 {
-  color: #f5ae23;
-  display: none;
+.banner-h3 {
+  color: #5f9ea0;
+}
+
+#skills {
+  display: block;
 }
 
 .orange {
-  background-color: #f5ae23;
+  color: #374255;
+  background-color: #5f9ea0;
 }
 
 .orange-text {
-  color: #f5ae23;
+  color: #5f9ea0;
 }
 
 .white-text {
@@ -127,9 +154,15 @@ a {
   background-color: #4a4a4a;
 }
 
-/* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  width: 100%;
+  background-color: #374255;
+  padding: 0 0 20px;
+}
+
+#banner {
+  width: 100%;
+  margin: 30px 0 0;
 }
 
 .flex-box {
@@ -138,11 +171,6 @@ a {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding: 10px;
-}
-
-.center-content {
-  padding: 2.5% 5%;
 }
 
 ul {
@@ -150,10 +178,11 @@ ul {
 }
 
 .biopic {
-  float: left;
   padding: 10px;
-  width: 200px;
-  display: none;
+  max-width: 200px;
+  -webkit-clip-path: circle(100px);
+  clip-path: circle(100px);
+  margin: 0 auto;
 }
 
 img {
@@ -168,6 +197,14 @@ span {
   text-align: center;
 }
 
+.menu-item {
+  width: 120px;
+  padding: 10px;
+  margin: 5px;
+  text-align: center;
+  border: 2px solid #1199c3;
+}
+
 /* Media queries to handle various device widths */
 
 @media only screen and (max-width: 1024px) {
@@ -176,19 +213,28 @@ span {
   }
 }
 
-@media only screen and (max-width:900px) {
-  .biopic {
-    width: 175px;
-  }
-}
-
 @media only screen and (max-width: 750px) {
+  #contacts-container {
+    width: 100%;
+    text-align: center;
+  }
+
+  #biopic-container {
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  #skills-container {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+
   #lets-connect {
     margin-top: 10%;
   }
-  .biopic {
-    width: 150px;
-  }
+
   .welcome-message {
     display: none;
   }
@@ -204,11 +250,4 @@ span {
   height: 400px;
   width: 100%;
   padding-bottom: 5%;
-}
-
-@media only screen and (min-width: 750px) {
-  #skills-h3,
-  .biopic {
-    display: block;
-  }
 }
